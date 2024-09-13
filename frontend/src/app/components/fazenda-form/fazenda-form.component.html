@@ -1,0 +1,10 @@
+<h2>{{ id ? 'Editar' : 'Criar' }} Fazenda</h2>
+<form (ngSubmit)="saveFazenda()">
+  <input [(ngModel)]="fazenda.nome" name="nome" placeholder="Nome" required />
+  <input [(ngModel)]="fazenda.matricula" name="matricula" placeholder="Matrícula" required />
+  <input [(ngModel)]="fazenda.localizacao" name="localizacao" placeholder="Localização" />
+  <input [(ngModel)]="fazenda.dono" name="dono" placeholder="Dono" />
+  <input [(ngModel)]="fazenda.area" name="area" type="number" placeholder="Área" />
+  <input [(ngModel)]="fazenda.tipo_plantacao" name="tipo_plantacao" placeholder="Tipo de Plantação" />
+  <button type="submit">{{ id ? 'Atualizar' : 'Criar' }}</button>
+</form>

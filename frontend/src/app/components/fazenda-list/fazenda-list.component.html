@@ -1,0 +1,8 @@
+<h2>Lista de Fazendas</h2>
+<ul>
+  <li *ngFor="let fazenda of fazendas">
+    {{ fazenda.nome }} - {{ fazenda.matricula }}
+    <button (click)="deleteFazenda(fazenda.id)">Deletar</button>
+  </li>
+</ul>
+<a routerLink="/fazendas/create">Criar nova fazenda</a>
